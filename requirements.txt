@@ -1,2 +1,2 @@
-flaks
-gunicorn
+Flaks == 2.2.3
+Gunicorn == 20.1.0
