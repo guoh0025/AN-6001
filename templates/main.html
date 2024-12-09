@@ -2,20 +2,20 @@
     <meta charst = "UTF-8">
     <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
     <title>Flask Example</title>
-    <link rel = "stylesheet" href = "{{url_for('static', filename = 'styles.css')}}">
+    <link rel = "stylesheet" href = "{{url_for("static", filename = "styles.css")}}">
 </head>
 
 <body>
     <div class = "container">
        <h2>Main </h2> 
-       <from action = '/' method = 'post'>
-            <p><input type = 'submit' value = 'GenAI'></p>
-       </from>
-       <from action = '/SA' method = 'post'>
-            <p><input type = 'submit' value = 'Sentiment Analysis'></p>
-        </from>
-       <from action = '/' method = 'post'>
-        <p><input type = 'submit' value = 'End'></p>
-   </from>
+       <form action = "/" method = "post">
+            <p><input type = "submit" value = "GenAI"></p>
+       </form>
+       <form action = "/SA" method = "post">
+            <p><input type = "submit" value = "Sentiment Analysis"></p>
+        </form>
+       <form action = "/" method = "post">
+        <p><input type = "submit" value = "End"></p>
+   </form>
     </div>
 </body>
