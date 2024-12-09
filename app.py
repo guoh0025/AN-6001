@@ -1,6 +1,9 @@
 from flask import Flask
 from flask import render_template,request
 import textblob
+import os
+
+#api = os.getenv("maskersuiter")
 
 app = Flask(__name__)
 
@@ -12,6 +15,10 @@ def index():
 def main():
     name = request.form.get("q")
     return(render_template("main.html"))
+
+@app.route("/GenAI",methods=["GET","POST"])
+def GenAI():
+    return(render_template("GenAI.html"))
 
 @app.route("/SA",methods=["GET","POST"])
 def SA():
