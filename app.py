@@ -45,5 +45,15 @@ def SA_result():
     score = textblob.TextBlob(q).sentiment
     return(render_template("SA_result.html", score = score))
 
+@app.route("/TM",methods=["GET","POST"])
+def SA():
+    return(render_template("TM.html"))
+
+@app.route("/TM_result",methods=["GET","POST"])
+def SA_result():
+    q = request.form.get("q")
+    score = textblob.TextBlob(q).sentiment
+    return(render_template("TM_result.html", score = score))
+
 if __name__ == "__main__":
     app.run()
